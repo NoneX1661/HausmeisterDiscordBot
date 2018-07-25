@@ -13,6 +13,7 @@ gamename = 'Mauerbausimulator 1961'
 @bot.event
 async def on_ready():
 	print("Bot is ready")
+	print(discord.__version__)
 	await bot.change_presence(game=discord.Game(name=gamename))
 	
 @bot.event
