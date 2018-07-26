@@ -7,17 +7,12 @@ import os
 
 client = discord.Client()
 bot = commands.Bot(command_prefix = "$")
-# offline Variables
-# botchannel = '470686765485785090'
-# botid = '235088799074484224'
-# bottoken = "NDcwODU4Nzc1NDUzMTA2MTg2.Djc1fQ.ogW4NrDpTRS0sPWEoX37LBtUuks"
-# gamename = 'Mauerbausimulator 1961'
 
-# Heroku variables
-botchannel = os.environ['BOTCHANNEL']
-botid = os.environ['BOTID']
-bottoken = os.environ['BOTTOKEN']
-gamename = os.environ['GAMENAME']
+# offline Variables
+botchannel = '470686765485785090'
+botid = '235088799074484224'
+bottoken = "NDcwODU4Nzc1NDUzMTA2MTg2.Djc1fQ.ogW4NrDpTRS0sPWEoX37LBtUuks"
+gamename = 'Mauerbausimulator 1961'
 
 @bot.event
 async def on_ready():
