@@ -9,15 +9,19 @@ client = discord.Client()
 bot = commands.Bot(command_prefix = "$")
 
 # offline Variables
-botchannel = '470686765485785090'
-botid = '235088799074484224'
-bottoken = "NDcwODU4Nzc1NDUzMTA2MTg2.Djc1fQ.ogW4NrDpTRS0sPWEoX37LBtUuks"
-gamename = 'Mauerbausimulator 1961'
+
+
+#Heroku Variables
+botchannel = os.environ['BOTCHANNEL']
+botid = os.environ['BOTID']
+bottoken = os.environ['BOTTOKEN']
+gamename = os.environ['BOTGAME']
 
 @bot.event
 async def on_ready():
 	print("Bot is ready")
 	print(discord.__version__)
+	print("Bottoken is %s"%(bottoken))
 	await bot.change_presence(game=discord.Game(name=gamename))
 	
 @bot.event
