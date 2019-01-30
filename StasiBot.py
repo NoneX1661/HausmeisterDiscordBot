@@ -31,7 +31,7 @@ async def on_message(message):
 	emb = message.embeds			# Embed content of the message
 	
 	
-	if message.content.startswith("!"):
+	if message.content.startswith("!") or message.content.startswith("p!"):
 		if message.channel != bot.get_channel(botchannel):
 			await bot.delete_message(message)
 			await bot.send_message(bot.get_channel(botchannel),"%s requested by %s!"%(msg, message.author.name))
