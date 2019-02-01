@@ -25,13 +25,14 @@ watcher = RiotWatcher(apikey)
 
 region = 'euw1'
 
-print(watcher.summoner.by_name(region, 'NoneX16')
+
 
 @bot.event
 async def on_ready():
 	print("Bot is ready")
 	print(discord.__version__)
 	print("Bottoken is %s"%(bottoken))
+	print(watcher.summoner.by_name(region, 'NoneX16')
 	await bot.change_presence(game=discord.Game(name=gamename))
 	
 @bot.event
