@@ -5,10 +5,10 @@ import asyncio
 import time
 import os
 
+
 client = discord.Client()
 bot = commands.Bot(command_prefix = "$")
 
-# offline Variables
 
 
 #Heroku Variables
@@ -16,6 +16,16 @@ botchannel = os.environ['BOTCHANNEL']
 botid = os.environ['BOTID']
 bottoken = os.environ['BOTTOKEN']
 gamename = os.environ['BOTGAME']
+riotapikey = os.environ['APIKEY']
+
+
+#Riot API Stuff
+from riotwatcher import RiotWatcher, ApiError
+watcher = RiotWatcher(apikey)
+
+region = 'euw1'
+
+print(watcher.summoner.by_name(region, 'NoneX16')
 
 @bot.event
 async def on_ready():
