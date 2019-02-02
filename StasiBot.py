@@ -4,6 +4,7 @@ from discord.ext import commands
 import asyncio
 import time
 import os
+import requests
 
 client = discord.Client()
 bot = commands.Bot(command_prefix = "$")
